@@ -39,52 +39,27 @@
       justify-items: center;
     }
 
-    .kategori {
+    .kategori-link {
       width: 180px;
       height: 180px;
       border-radius: 50%;
       background-color: white;
       border: 3px solid var(--border);
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease;
       text-align: center;
-    }
-
-    .kategori:hover {
-      transform: scale(1.05);
-    }
-
-    summary {
-      border: none;
-      background-color: transparent;
-      padding: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1em;
-      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
       color: var(--accent);
-      margin-top: 50px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .kategori[open] {
+    .kategori-link:hover {
+      transform: scale(1.05);
       background-color: #e0f2fe;
-      border-color: var(--accent);
-    }
-
-    .kategori[open] summary {
-      margin-top: 20px;
-    }
-
-    .kategori p {
-      font-size: 0.9em;
-      padding: 0 15px;
-      margin: 10px 0 0 0;
-      color: var(--primary);
     }
 
     @media (max-width: 900px) {
@@ -104,35 +79,12 @@
   <h1>NFC AZE</h1>
 
   <div class="grid">
-    <details class="kategori">
-      <summary>Haqqımızda</summary>
-      <p>Şirkət 2024-cü ildə qurulmuşdur və NFC texnologiyasında ixtisaslaşır.</p>
-    </details>
-
-    <details class="kategori">
-      <summary>Xidmətlər</summary>
-      <p>NFC Kartlar, Stendlər, Stikerlər və Üzüklər təklif olunur.</p>
-    </details>
-
-    <details class="kategori">
-      <summary>Əlaqə</summary>
-      <p>Telefon: +994 00 000 00 00<br>Email: info@nfcaze.com</p>
-    </details>
-
-    <details class="kategori">
-      <summary>Komanda</summary>
-      <p>Yaradıcılıq və peşəkarlıqla dolu gənc komanda.</p>
-    </details>
-
-    <details class="kategori">
-      <summary>Qiymətlər</summary>
-      <p>Münasib qiymətlərlə məhsullar və xidmətlər təqdim olunur.</p>
-    </details>
-
-    <details class="kategori">
-      <summary>Üstünlüklər</summary>
-      <p>Tez çatdırılma, zəmanət və 7/24 dəstək xidmətimiz mövcuddur.</p>
-    </details>
+    <a href="https://github.com/nfcaze/haqqimizda" class="kategori-link" target="_blank">Haqqımızda</a>
+    <a href="https://github.com/nfcaze/xidmetler" class="kategori-link" target="_blank">Xidmətlər</a>
+    <a href="https://github.com/nfcaze/elaqe" class="kategori-link" target="_blank">Əlaqə</a>
+    <a href="https://github.com/nfcaze/komanda" class="kategori-link" target="_blank">Komanda</a>
+    <a href="https://github.com/nfcaze/qiymetler" class="kategori-link" target="_blank">Qiymətlər</a>
+    <a href="https://github.com/nfcaze/ustunlukler" class="kategori-link" target="_blank">Üstünlüklər</a>
   </div>
 </body>
 </html>
