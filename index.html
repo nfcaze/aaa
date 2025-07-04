@@ -3,10 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>NFC AZE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    .kategori { margin-bottom: 10px; }
-    summary { cursor: pointer; font-weight: bold; }
+    :root {
+      --bg-color: #f9fafb;
+      --card-bg: #ffffff;
+      --primary-color: #1f2937;
+      --accent-color: #3b82f6;
+      --border-color: #e5e7eb;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: var(--accent-color);
+      text-align: center;
+    }
+
+    .kategori {
+      width: 100%;
+      max-width: 600px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 16px 20px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      background-color: #f3f4f6;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .kategori[open] summary {
+      background-color: #e0f2fe;
+      color: var(--accent-color);
+    }
+
+    .kategori p {
+      padding: 16px 20px;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      summary, .kategori p {
+        font-size: 1em;
+        padding: 14px 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -14,7 +85,7 @@
 
   <details class="kategori">
     <summary>Haqqımızda</summary>
-    <p>Şirkət 2024-cü ildə qurulmuşdur. Şirkən hal hazırda aktivdir və nfc dəatəkli hər bir məhsulu təqdim edir.</p>
+    <p>Şirkət 2024-cü ildə qurulmuşdur. Şirkət hal-hazırda aktivdir və NFC dəstəkli hər bir məhsulu təqdim edir.</p>
   </details>
 
   <details class="kategori">
