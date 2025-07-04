@@ -9,7 +9,7 @@
       --bg-color: #f3f4f6;
       --primary: #1f2937;
       --accent: #3b82f6;
-      --border: #e5e7eb;
+      --border: #d1d5db;
     }
 
     body {
@@ -34,13 +34,14 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      max-width: 900px;
+      max-width: 800px;
       width: 100%;
+      justify-items: center;
     }
 
     .kategori {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       background-color: white;
       border: 3px solid var(--border);
@@ -60,20 +61,14 @@
       padding: 20px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1em;
       list-style: none;
       color: var(--accent);
+      margin-top: 50px;
     }
 
     summary::-webkit-details-marker {
       display: none;
-    }
-
-    .kategori p {
-      font-size: 0.9em;
-      padding: 0 15px;
-      margin: 0;
-      color: var(--primary);
     }
 
     .kategori[open] {
@@ -82,16 +77,23 @@
     }
 
     .kategori[open] summary {
-      margin-bottom: 10px;
+      margin-top: 20px;
     }
 
-    @media (max-width: 768px) {
+    .kategori p {
+      font-size: 0.9em;
+      padding: 0 15px;
+      margin: 10px 0 0 0;
+      color: var(--primary);
+    }
+
+    @media (max-width: 900px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       .grid {
         grid-template-columns: 1fr;
       }
@@ -104,12 +106,12 @@
   <div class="grid">
     <details class="kategori">
       <summary>Haqqımızda</summary>
-      <p>Şirkət 2024-cü ildə qurulmuşdur. Hal-hazırda aktivdir və NFC dəstəkli məhsullar təqdim edir.</p>
+      <p>Şirkət 2024-cü ildə qurulmuşdur və NFC texnologiyasında ixtisaslaşır.</p>
     </details>
 
     <details class="kategori">
       <summary>Xidmətlər</summary>
-      <p>NFC Kartlar, Stendlər, Stikerlər və Üzüklər təqdim olunur.</p>
+      <p>NFC Kartlar, Stendlər, Stikerlər və Üzüklər təklif olunur.</p>
     </details>
 
     <details class="kategori">
@@ -119,17 +121,17 @@
 
     <details class="kategori">
       <summary>Komanda</summary>
-      <p>Peşəkar və gənc komanda ilə xidmət göstəririk.</p>
+      <p>Yaradıcılıq və peşəkarlıqla dolu gənc komanda.</p>
     </details>
 
     <details class="kategori">
       <summary>Qiymətlər</summary>
-      <p>Bütün məhsullar münasib qiymətlərlə təklif olunur.</p>
+      <p>Münasib qiymətlərlə məhsullar və xidmətlər təqdim olunur.</p>
     </details>
 
     <details class="kategori">
       <summary>Üstünlüklər</summary>
-      <p>Tez çatdırılma, zəmanət və 7/24 dəstək ilə fərqlənirik.</p>
+      <p>Tez çatdırılma, zəmanət və 7/24 dəstək xidmətimiz mövcuddur.</p>
     </details>
   </div>
 </body>
