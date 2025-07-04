@@ -14,20 +14,47 @@
 
     body {
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
       background-color: var(--bg-color);
       font-family: 'Segoe UI', sans-serif;
       color: var(--primary);
+    }
+
+    /* ÜST ŞERİT */
+    .ust-serit {
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .ust-serit .logo {
+      margin-left: 150px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ust-serit .logo img {
+      height: 40px;
+    }
+
+    .ust-serit .baslik {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2em;
+      font-weight: bold;
     }
 
     h1 {
       font-size: 2.2em;
-      margin-bottom: 40px;
-      color: var(--accent);
+      margin: 40px 0 30px;
       text-align: center;
+      color: var(--accent);
     }
 
     .grid {
@@ -36,7 +63,9 @@
       gap: 30px;
       max-width: 800px;
       width: 100%;
+      margin: auto;
       justify-items: center;
+      padding: 20px;
     }
 
     .kategori-link {
@@ -76,6 +105,15 @@
   </style>
 </head>
 <body>
+
+  <!-- ÜST ŞERİT -->
+  <div class="ust-serit">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Logo">
+    </div>
+    <div class="baslik">Test test</div>
+  </div>
+
   <h1>NFC AZE</h1>
 
   <div class="grid">
@@ -86,5 +124,6 @@
     <a href="https://github.com/nfcaze/qiymetler" class="kategori-link" target="_blank">Qiymətlər</a>
     <a href="https://github.com/nfcaze/ustunlukler" class="kategori-link" target="_blank">Üstünlüklər</a>
   </div>
+
 </body>
 </html>
