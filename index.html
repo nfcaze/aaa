@@ -6,102 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --bg-color: #f9fafb;
-      --card-bg: #ffffff;
-      --primary-color: #1f2937;
-      --accent-color: #3b82f6;
-      --border-color: #e5e7eb;
+      --bg-color: #f3f4f6;
+      --primary: #1f2937;
+      --accent: #3b82f6;
+      --border: #e5e7eb;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--primary-color);
       margin: 0;
       padding: 40px 20px;
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--primary);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-bottom: 40px;
-      color: var(--accent-color);
+      color: var(--accent);
       text-align: center;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      max-width: 800px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 900px;
       width: 100%;
     }
 
     .kategori {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      border: 3px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
       overflow: hidden;
-      transition: transform 0.2s;
+      transition: transform 0.2s ease;
+      text-align: center;
     }
 
     .kategori:hover {
-      transform: scale(1.02);
+      transform: scale(1.05);
     }
 
     summary {
-      font-size: 1em;
-      font-weight: 600;
+      border: none;
+      background-color: transparent;
+      padding: 20px;
       cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
       list-style: none;
-      background-color: #f3f4f6;
-      padding: 40px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 50%;
-      margin: 20px auto 10px auto;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary-color);
-      transition: background-color 0.3s, color 0.3s;
+      color: var(--accent);
     }
 
     summary::-webkit-details-marker {
       display: none;
     }
 
-    .kategori[open] summary {
-      background-color: #e0f2fe;
-      color: var(--accent-color);
-    }
-
     .kategori p {
-      padding: 0 20px 20px 20px;
-      font-size: 0.95em;
-      line-height: 1.5;
-      text-align: center;
+      font-size: 0.9em;
+      padding: 0 15px;
+      margin: 0;
+      color: var(--primary);
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
+    .kategori[open] {
+      background-color: #e0f2fe;
+      border-color: var(--accent);
+    }
 
-      summary {
-        width: 80px;
-        height: 80px;
-        padding: 20px;
-        font-size: 0.9em;
-      }
+    .kategori[open] summary {
+      margin-bottom: 10px;
+    }
 
-      .kategori p {
-        font-size: 0.9em;
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -112,20 +104,19 @@
   <div class="grid">
     <details class="kategori">
       <summary>Haqqımızda</summary>
-      <p>Şirkət 2024-cü ildə qurulmuşdur. Şirkət hal-hazırda aktivdir və NFC dəstəkli hər bir məhsulu təqdim edir.</p>
+      <p>Şirkət 2024-cü ildə qurulmuşdur. Hal-hazırda aktivdir və NFC dəstəkli məhsullar təqdim edir.</p>
     </details>
 
     <details class="kategori">
       <summary>Xidmətlər</summary>
-      <p>NFC dəstəkli Plastik Kartlar, Stendlər, Stikerlər, Üzüklər</p>
+      <p>NFC Kartlar, Stendlər, Stikerlər və Üzüklər təqdim olunur.</p>
     </details>
 
     <details class="kategori">
       <summary>Əlaqə</summary>
-      <p>Telefon: +994(00) 000-00-00<br>Email: info@nfcaze.com</p>
+      <p>Telefon: +994 00 000 00 00<br>Email: info@nfcaze.com</p>
     </details>
 
-    <!-- Yeni kategori ekleyebilirsin -->
     <details class="kategori">
       <summary>Komanda</summary>
       <p>Peşəkar və gənc komanda ilə xidmət göstəririk.</p>
