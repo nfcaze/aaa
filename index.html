@@ -31,26 +31,45 @@
       text-align: center;
     }
 
-    .kategori {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 800px;
       width: 100%;
-      max-width: 600px;
+    }
+
+    .kategori {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      margin-bottom: 20px;
+      border-radius: 16px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
       overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .kategori:hover {
+      transform: scale(1.02);
     }
 
     summary {
-      padding: 16px 20px;
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 600;
       cursor: pointer;
       list-style: none;
       background-color: #f3f4f6;
+      padding: 40px;
+      text-align: center;
       border-bottom: 1px solid var(--border-color);
+      border-radius: 50%;
+      margin: 20px auto 10px auto;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     summary::-webkit-details-marker {
@@ -63,9 +82,10 @@
     }
 
     .kategori p {
-      padding: 16px 20px;
-      font-size: 1em;
-      line-height: 1.6;
+      padding: 0 20px 20px 20px;
+      font-size: 0.95em;
+      line-height: 1.5;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
@@ -73,9 +93,15 @@
         font-size: 2em;
       }
 
-      summary, .kategori p {
-        font-size: 1em;
-        padding: 14px 16px;
+      summary {
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+        font-size: 0.9em;
+      }
+
+      .kategori p {
+        font-size: 0.9em;
       }
     }
   </style>
@@ -83,24 +109,37 @@
 <body>
   <h1>NFC AZE</h1>
 
-  <details class="kategori">
-    <summary>Haqqımızda</summary>
-    <p>Şirkət 2024-cü ildə qurulmuşdur. Şirkət hal-hazırda aktivdir və NFC dəstəkli hər bir məhsulu təqdim edir.</p>
-  </details>
+  <div class="grid">
+    <details class="kategori">
+      <summary>Haqqımızda</summary>
+      <p>Şirkət 2024-cü ildə qurulmuşdur. Şirkət hal-hazırda aktivdir və NFC dəstəkli hər bir məhsulu təqdim edir.</p>
+    </details>
 
-  <details class="kategori">
-    <summary>Xidmətlər</summary>
-    <p>NFC dəstəkli Plastik Kartlar, Stendlər, Stikerlər, Üzüklər</p>
-  </details>
+    <details class="kategori">
+      <summary>Xidmətlər</summary>
+      <p>NFC dəstəkli Plastik Kartlar, Stendlər, Stikerlər, Üzüklər</p>
+    </details>
 
-  <details class="kategori">
-    <summary>Əlaqə</summary>
-    <p>Telefon: +994(00) 000-00-00<br>Email: info@nfcaze.com</p>
-  </details>
-  
-  <details class="kategori">
-    <summary>Sosial</summary>
-    <p>Instagram: nfc.aze</p>
-  </details>
+    <details class="kategori">
+      <summary>Əlaqə</summary>
+      <p>Telefon: +994(00) 000-00-00<br>Email: info@nfcaze.com</p>
+    </details>
+
+    <!-- Yeni kategori ekleyebilirsin -->
+    <details class="kategori">
+      <summary>Komanda</summary>
+      <p>Peşəkar və gənc komanda ilə xidmət göstəririk.</p>
+    </details>
+
+    <details class="kategori">
+      <summary>Qiymətlər</summary>
+      <p>Bütün məhsullar münasib qiymətlərlə təklif olunur.</p>
+    </details>
+
+    <details class="kategori">
+      <summary>Üstünlüklər</summary>
+      <p>Tez çatdırılma, zəmanət və 7/24 dəstək ilə fərqlənirik.</p>
+    </details>
+  </div>
 </body>
 </html>
