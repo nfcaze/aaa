@@ -5,77 +5,54 @@
   <title>Haqqımızda - Meqa Sığorta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --bg: #f3f4f6;
+      --primary: #1f2937;
+      --accent: #3b82f6;
+      --whiteglass: rgba(255, 255, 255, 0.75);
+    }
+
     body {
-  margin: 0;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url('https://raw.githubusercontent.com/nfcaze/aaa/7d7ea47a2c608407f1689ff72184089be3008622/Megalogo1.png') no-repeat calc(50% - 20px) center fixed;
-  background-size: cover;
-}
-
-
-    header {
-      background-color: #3b82f6;
-      padding: 15px 30px;
-      color: white;
-      text-align: center;
-      font-size: 1.8em;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--primary);
+      background: url('https://raw.githubusercontent.com/nfcaze/aaa/7d7ea47a2c608407f1689ff72184089be3008622/Megalogo1.png') no-repeat calc(50% - 20px) center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
+    .container {
+      max-width: 800px;
+      background-color: var(--whiteglass);
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(6px);
     }
 
-    h2 {
-      color: #3b82f6;
-      margin-bottom: 15px;
-    }
-
-    p {
-      line-height: 1.7;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: var(--accent);
       margin-bottom: 20px;
     }
 
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.4em;
-      }
-
-      main {
-        padding: 20px;
-      }
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    Meqa Sığorta - Haqqımızda
-  </header>
-
-  <main>
-    <h2>Şirkət Haqqında</h2>
-    <p>NFC AZE şirkəti 2024-cü ildə Azərbaycanda yaradılmışdır. Əsas məqsədimiz texnologiyanın gündəlik həyata inteqrasiyasını sürətləndirmək və fərdi, həmçinin korporativ müştərilərimizə innovativ NFC həlləri təqdim etməkdir.</p>
-
-    <p>Biz müştərilərimizə plastik NFC kartlar, stikerlər, üzüklər və daha bir çox smart məhsullar təqdim edirik. Hər bir məhsul fərdi ehtiyaclara uyğun olaraq proqramlaşdırılır və şəxsi məlumatların təhlükəsiz saxlanılması ön planda tutulur.</p>
-
-    <h2>Missiyamız</h2>
-    <p>Məqsədimiz, Azərbaycanda və regionda NFC texnologiyasını geniş yaymaq və insanların gündəlik həyatında daha təhlükəsiz və sürətli məlumat paylaşımını təmin etməkdir.</p>
-
-    <h2>Gələcək Planlarımız</h2>
-    <p>Gələcəkdə NFC AZE olaraq məhsul çeşidimizi artırmaq, yeni əməkdaşlıqlar qurmaq və beynəlxalq bazarda da tanınan bir marka olmaq istəyirik.</p>
-  </main>
+  <div class="container">
+    <h1>Haqqımızda</h1>
+    <p>Şirkətimiz 2024-cü ildə təsis edilmişdir və bu gündən etibarən NFC texnologiyası sahəsində keyfiyyətli xidmətlər göstərməkdədir.</p>
+    <p>Məqsədimiz müştərilərimizə müasir, sürətli və təhlükəsiz NFC həlləri təqdim edərək, onların bizneslərini rəqəmsallaşdırmaqda dəstək olmaqdır.</p>
+  </div>
 
 </body>
 </html>
