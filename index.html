@@ -64,15 +64,20 @@
 
     .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Aradaki boşluğu azalttık */
+  grid-template-columns: repeat(3, 1fr); /* Masaüstü: 3 sütun */
+  gap: 20px;
   padding: 20px;
+  max-width: 800px;
   width: 100%;
-  max-width: 600px; /* Genişliği daralttık */
-  margin: 0 auto; /* Ortaladık */
+  margin: 0 auto;
   justify-items: center;
 }
 
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Mobil: 2 sütun */
+  }
+}
 
     .kategori-link {
       width: 160px;
