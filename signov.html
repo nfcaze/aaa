@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sığorta Növləri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-color: #f3f4f6;
+      --primary: #1f2937;
+      --accent: #3b82f6;
+      --border: #d1d5db;
+      --whiteglass: rgba(255, 255, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://raw.githubusercontent.com/nfcaze/aaa/7d7ea47a2c608407f1689ff72184089be3008622/Megalogo1.png') no-repeat calc(50% - 10px) center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .ust-serit {
+      width: 100%;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+
+    .ust-serit img {
+      height: 40px;
+      margin-right: auto;
+      margin-left: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 20px 0 10px;
+      color: var(--accent);
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto 30px;
+      justify-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kategori-link {
+        width: 140px;
+        height: 140px;
+        font-size: 1em;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .ust-serit {
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+      }
+
+      .ust-serit img {
+        height: 35px;
+        margin-left: 10px;
+      }
+    }
+
+    .kategori-link {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 3px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.05em;
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .kategori-link:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Geri Dön Butonu */
+    .back-button {
+      padding: 12px 24px;
+      background-color: var(--whiteglass);
+      color: #301934;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 40px;
+      backdrop-filter: blur(4px);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="ust-serit">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png" alt="Logo">
+  </div>
+
+  <h1>Sığorta Növləri</h1>
+
+  <div class="grid">
+    <a href="nov1.html" class="kategori-link">Növ 1</a>
+    <a href="nov2.html" class="kategori-link">Növ 2</a>
+    <a href="nov3.html" class="kategori-link">Növ 3</a>
+    <a href="nov4.html" class="kategori-link">Növ 4</a>
+    <a href="nov5.html" class="kategori-link">Növ 5</a>
+    <a href="nov6.html" class="kategori-link">Növ 6</a>
+  </div>
+
+  <!-- Geri dön butonu -->
+  <a href="index.html" class="back-button">Əsas Səhifəyə Qayıt</a>
+
+</body>
+</html>
