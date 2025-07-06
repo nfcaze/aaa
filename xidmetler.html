@@ -10,6 +10,7 @@
       --primary: #1f2937;
       --accent: #3b82f6;
       --border: #d1d5db;
+      --whiteglass: rgba(255, 255, 255, 0.25);
     }
 
     * {
@@ -50,7 +51,7 @@
 
     h1 {
       font-size: 2em;
-      margin: 20px 0;
+      margin: 20px 0 10px;
       color: var(--accent);
       text-align: center;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -63,7 +64,7 @@
       padding: 20px;
       max-width: 800px;
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 30px;
       justify-items: center;
     }
 
@@ -71,30 +72,6 @@
       .grid {
         grid-template-columns: repeat(2, 1fr);
       }
-    }
-
-    .kategori-link {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.5);
-      border: 3px solid var(--border);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 1.05em;
-      backdrop-filter: blur(4px);
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    .kategori-link:hover {
-      transform: scale(1.05);
-      background-color: rgba(255, 255, 255, 0.6);
     }
 
     @media (max-width: 600px) {
@@ -123,6 +100,51 @@
         margin-left: 10px;
       }
     }
+
+    .kategori-link {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 3px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.05em;
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .kategori-link:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Geri Dön Butonu */
+    .back-button {
+      padding: 12px 24px;
+      background-color: var(--whiteglass);
+      color: #301934;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 40px;
+      backdrop-filter: blur(4px);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -133,12 +155,16 @@
   <h1>Xidmətlər</h1>
 
   <div class="grid">
-    <a href="https://nfcaze.github.io/aaa/xdmt1.html" class="kategori-link" target="_blank">Xidmət 1</a>
-    <a href="https://nfcaze.github.io/aaa/xdmt2.html" class="kategori-link" target="_blank">Xidmət 2</a>
-    <a href="https://nfcaze.github.io/aaa/xdmt3.html" class="kategori-link" target="_blank">Xidmət 3</a>
-    <a href="https://nfcaze.github.io/aaa/xdmt4.html" class="kategori-link" target="_blank">Xidmət 4</a>
-    <a href="https://nfcaze.github.io/aaa/xdmt5.html" class="kategori-link" target="_blank">Xidmət 5</a>
-    <a href="https://nfcaze.github.io/aaa/xdmt6.html" class="kategori-link" target="_blank">Xidmət 6</a>
+    <a href="xdmt1.html" class="kategori-link">Xidmət 1</a>
+    <a href="xdmt2.html" class="kategori-link">Xidmət 2</a>
+    <a href="xdmt3.html" class="kategori-link">Xidmət 3</a>
+    <a href="xdmt4.html" class="kategori-link">Xidmət 4</a>
+    <a href="xdmt5.html" class="kategori-link">Xidmət 5</a>
+    <a href="xdmt6.html" class="kategori-link">Xidmət 6</a>
   </div>
+
+  <!-- Geri dön butonu -->
+  <a href="index.html" class="back-button">Əsas Səhifəyə Qayıt</a>
+
 </body>
 </html>
